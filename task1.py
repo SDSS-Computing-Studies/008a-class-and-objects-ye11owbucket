@@ -6,10 +6,7 @@ It should have the following properties
 str name
 str studentNumber
 int grade
-list courses - to corresepond with course names
-list grades - to correspond with grades
-
-It should have the following methods:
+list courses - to corresepond with course names    vvbvbvb
 average()       - determines the mathematical average of all course grades
 getHonorRoll()  - determines the average of the top 5 courses if there are at least 5 courses.
                   returns True if the average is 86 or higher (on the honor roll)
@@ -22,6 +19,7 @@ getGrades(list) - Receives a list of grades and stores that in the class propert
 constructor     - should require the student name, studentNumber and grade (in that order)
 """
 
+
 class student:
     name  = ""
     studentNumber = ""
@@ -30,49 +28,27 @@ class student:
     grades = ()
 
 
-    def __init__(self, name, studentNumber, grade, courses, grades):
-        self.grade = grade
-        self.name = name
-        self.grades = grades
-        self.studentNumber = studentNumber
+    def __init__(self, name, studentNumber, grade,):
+        self.grade = int(grade)
+        self.name = str(name)
+        self.studentNumber = int(studentNumber)
+
+
+    def getCourses(self,courses):
         self.courses = courses
-        print("the student's name is " + self.name)
-    
 
-def act():
-        print("press:")
-        print("1 for average")
-        print("2 for courses")
-        print("3 for grade, then enter which course")
-        print("4 for honor roll check")
-        return None
+    def getGrades(self,grades):
+        self.grades = grades
 
-print(act())
-    
-exit()
-x = 1
+    def average(self):
+        x = sum(self.grades) / len(self.grades)
+        return x 
 
-if x == 1:
-    def __del__():
-
-        pass
-def average(self):
-        self.getGrades()
-
-        pass
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def getHonorRoll(self):
+        if sum(self.grades) / len(self.grades) > 85:
+            return True
+        else:
+            return False
 
 
 
