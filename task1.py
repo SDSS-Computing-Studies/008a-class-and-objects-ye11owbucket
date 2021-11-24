@@ -39,14 +39,15 @@ class student:
         print("the student's name is " + self.name)
     
 
-    def actions():
+def act():
         print("press:")
         print("1 for average")
         print("2 for courses")
         print("3 for grade, then enter which course")
         print("4 for honor roll check")
+        return None
 
-print(actions())
+print(act())
     
 exit()
 x = 1
